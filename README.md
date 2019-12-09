@@ -1,3 +1,3 @@
 ## Resources
-* [Repo source] (https://github.com/prmichaelsen/cicd-test)
+* [Repo source](https://github.com/prmichaelsen/cicd-test)
 
