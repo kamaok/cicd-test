@@ -56,7 +56,7 @@ Configuration-> Configuration system->Cloud->Add new cloud->Amazon EC2
 ```
 
 Детальная настройка такого Cloud расписана в отдельной [статье](https://kamaok.org.ua/?p=3022)
-Адоптируя ее к текущей задачи я изменил следующее:
+Применяя ее к текущей задачи было изменино следующее:
 ```bash
 Region –выберите регион, в котором создавали SSH-ключ
 AMI ID - Базовый образ, из которого разворачиваем контейнер, Amazon Linux 2
@@ -83,10 +83,17 @@ Subnet IDs for VPC ->одна из существующих подсетей в 
 После чего проверяется наличие установленной java, если она не установлено, тогда устанавливается. Затем с мастера копируется jar-файл на slave-агент и запускается на нем
 После успешного запуска jar-файла мастер сообщает о том, что slave-агент запущен и сконфигурирован.После этого  на slave-агенте начинаются выполняться шаги  указанные в pipeline
 
-В логах сборки содержится URL, на котором доступно приложение
+В логах сборки содержится URL, на котором доступно приложение.
 
 
-#####Source:
+[Логи выполнения сборки](https://raw.githubusercontent.com/kamaok/cicd-test/master/screens/jenkins-build-log.png)
+
+[Логи запуска EC2-slave-агента](https://raw.githubusercontent.com/kamaok/cicd-test/master/screens/jenkins-ec2-slave-log.png)
+
+**Результат выполнения сборки**
+![Результат выполнения сборки](https://raw.githubusercontent.com/kamaok/cicd-test/master/screens/jenkins-build-pipeline.png)
+
+##### Source:
 
  - [Nodejs application](https://github.com/prmichaelsen/cicd-test/blob/master/README.md)
 
